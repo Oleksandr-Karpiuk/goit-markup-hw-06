@@ -580,11 +580,17 @@ ul {
 }
 
 .form-field {
-  display: block;
+  display: flex;
+  flex-direction: column;
 }
 
 .form-field:not(:last-child) {
   margin-bottom: 10px;
+}
+
+.form-label {
+  order: -1;
+  margin-bottom: 4px;
 }
 
 .form-message {
