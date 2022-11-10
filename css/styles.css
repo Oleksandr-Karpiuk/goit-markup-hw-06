@@ -192,7 +192,8 @@ ul {
   color: var(--white-color);
 }
 
-.hero-button {
+.hero-button,
+.form-button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -218,7 +219,9 @@ ul {
 }
 
 .hero-button:hover,
-.hero-button:focus {
+.hero-button:focus,
+.form-button:hover,
+.form-button:focus {
   background-color: #188ce8;
 }
 
@@ -525,6 +528,7 @@ ul {
 
   width: 528px;
   min-height: 581px;
+  padding: 40px;
 
   background-color: var(--white-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -557,6 +561,43 @@ ul {
   border-radius: 50%;
 
   cursor: pointer;
+}
+
+.modal-title {
+  margin-bottom: 12px;
+
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+}
+
+/* ============================
+   СТИЛІ ФОРМИ МОДАЛЬНОГО ВІКНА
+   ============================ */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-field {
+  display: block;
+}
+
+.form-field:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.form-message {
+  resize: none;
+}
+
+.form-checkbox {
+  display: block;
+  margin-bottom: 30px;
+}
+
+.form-button {
+  min-width: 200px;
 }
 
 /* PORTFOLIO.HTML MAIN */
