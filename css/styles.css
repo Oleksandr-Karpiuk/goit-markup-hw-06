@@ -1,0 +1,698 @@
+:root {
+  --main-bcg-color: #ffffff;
+  --hero-footer-bcg: #2f303a;
+  --team-bcg-color: #f5f4fa;
+  --main-color: #212121;
+  --secondary-color: #757575;
+  --focus-color: #2196f3;
+  --black-color: #000000;
+  --white-color: #ffffff;
+  --address-color: rgba(255, 255, 255, 0.6);
+  --icons-color: #afb1b8;
+  --overlay-portfolio: rgba(33, 150, 243, 0.9);
+  --duration: 250ms;
+  --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body {
+  background-color: var(--main-bcg-color);
+
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--main-color);
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.container {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.section {
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.section.advantage {
+  padding-bottom: 0;
+}
+
+/* HEADER */
+.page-header .container,
+.page-nav,
+.header-list,
+.page-contacts,
+.contacts {
+  display: flex;
+}
+
+.page-header {
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+  border-bottom: 1px solid #ececec;
+}
+
+.page-logo {
+  display: block;
+  padding-top: 24px;
+  padding-bottom: 25px;
+
+  font-family: "Raleway", sans-serif;
+  font-size: 26px;
+  line-height: 1.2;
+  text-decoration: none;
+  color: var(--black-color);
+}
+
+.logo-style {
+  color: var(--focus-color);
+}
+
+.header-list {
+  margin-left: 93px;
+}
+
+.nav-item:not(:first-child),
+.contacts:last-child {
+  margin-left: 50px;
+}
+
+.page-contacts {
+  margin-left: auto;
+}
+
+.link,
+.link-contacts {
+  display: flex;
+  align-items: center;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  color: var(--main-color);
+
+  transition: color var(--duration) var(--timing-function);
+}
+
+.link-contacts {
+  color: var(--secondary-color);
+}
+
+.link-contacts > .icons {
+  margin-right: 10px;
+}
+
+.link:hover,
+.link:focus,
+.link-contacts:hover,
+.link-contacts:focus {
+  color: var(--focus-color);
+}
+
+.link.link-active {
+  position: relative;
+  color: var(--focus-color);
+}
+
+.link.link-active::after {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  display: block;
+  margin-bottom: -1px;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+
+  background-color: var(--focus-color);
+}
+
+/* MAIN */
+/* головна секція hero */
+.hero {
+  max-width: 1600px;
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 200px;
+  padding-bottom: 200px;
+
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/hero.jpg);
+}
+
+.hero,
+.page-footer {
+  background-color: var(--hero-footer-bcg);
+}
+
+.hero-title {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+  width: 696px;
+
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--white-color);
+}
+
+.hero-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 216px;
+  height: 50px;
+  margin-left: auto;
+  margin-right: auto;
+
+  border: none;
+  border-radius: 4px;
+  background-color: var(--focus-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  color: var(--white-color);
+
+  transition: background-color var(--duration) var(--timing-function);
+}
+
+.hero-button:hover,
+.hero-button:focus {
+  background-color: #188ce8;
+}
+
+/* секція наші переваги */
+.hidden-title {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.advantage-list {
+  display: flex;
+  gap: 30px;
+}
+
+.advantage-item {
+  flex-basis: calc((100% - 30px * 3) / 4);
+}
+
+.advantage-icons {
+  display: flex;
+  margin-bottom: 30px;
+  height: 120px;
+  justify-content: center;
+  align-items: center;
+
+  background: var(--team-bcg-color);
+  border-radius: 4px;
+}
+
+.advantage-title {
+  margin-bottom: 10px;
+
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+}
+
+.advantage-text {
+  color: var(--secondary-color);
+}
+
+/* секція чим ми займаємось */
+.section-title {
+  margin-bottom: 50px;
+
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+}
+
+.job-list {
+  display: flex;
+  gap: 30px;
+}
+
+.job-item {
+  flex-basis: calc((100% - 30px * 2) / 3);
+}
+
+.image {
+  display: block;
+  max-width: 100%;
+}
+
+.wrapper {
+  position: relative;
+}
+
+.overlay-text {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  padding-top: 27px;
+  padding-bottom: 27px;
+  width: 100%;
+
+  font-weight: 700;
+  line-height: 1.14;
+  text-align: center;
+  text-transform: uppercase;
+
+  background-color: rgba(47, 48, 58, 0.8);
+  color: var(--white-color);
+}
+
+/* секція наша команда */
+.team {
+  background-color: var(--team-bcg-color);
+
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+}
+
+.team-list {
+  display: flex;
+  gap: 30px;
+}
+
+.team-item {
+  flex-basis: calc((100% - 30px * 3) / 4);
+  background-color: var(--main-bcg-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+
+.team-member {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.team-title {
+  margin-bottom: 10px;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.team-text {
+  margin-bottom: 16px;
+  color: var(--secondary-color);
+}
+
+/* ЧАСТИНА З ПОСИЛАНЬ НА СОЦМЕРЕЖІ КОМАНДИ */
+.icon-list {
+  display: flex;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  gap: 10px;
+}
+
+.icon-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  color: var(--icons-color);
+
+  transition: background-color var(--duration) var(--timing-function),
+    color var(--duration) var(--timing-function);
+}
+
+.icon-link:hover,
+.icon-link:focus {
+  background-color: var(--focus-color);
+  color: var(--white-color);
+}
+
+/* Cекція клієнти */
+.clients-list {
+  display: flex;
+  gap: 30px;
+}
+
+.clients-link {
+  display: flex;
+  width: 170px;
+  height: 92px;
+  justify-content: center;
+  align-items: center;
+
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+
+  color: var(--icons-color);
+
+  transition: border-color var(--duration) var(--timing-function),
+    color var(--duration) var(--timing-function);
+}
+
+.clients-link:hover,
+.clients-link:focus {
+  border-color: var(--focus-color);
+  color: var(--focus-color);
+}
+
+.icons {
+  fill: currentColor;
+}
+
+/* FOOTER */
+.page-footer {
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.page-logo.footer-logo {
+  margin-bottom: 20px;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.logo-footer,
+.footer-link.address-link {
+  color: var(--white-color);
+}
+
+.footer-item:not(:last-child) {
+  margin-bottom: 9px;
+}
+
+.footer-link {
+  display: block;
+
+  font-style: normal;
+  text-decoration: none;
+  color: var(--address-color);
+
+  transition: color var(--duration) var(--timing-function);
+}
+
+.footer-link:hover,
+.footer-link:focus {
+  color: var(--focus-color);
+}
+
+/* FOOTER іконки з посиланнями на соцмережі */
+.footer-flex {
+  display: flex;
+  align-items: baseline;
+  gap: 70px;
+}
+
+.footer-title {
+  display: block;
+  margin-bottom: 20px;
+
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: var(--white-color);
+}
+
+.icon-footer {
+  display: flex;
+  gap: 10px;
+}
+
+.footer-icon-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--white-color);
+
+  transition: background-color var(--duration) var(--timing-function);
+}
+
+.footer-icon-link:hover,
+.footer-icon-link:focus {
+  background-color: var(--focus-color);
+}
+
+.footer-icons {
+  fill: currentColor;
+}
+
+/* ==========================
+        МОДАЛЬНЕ ВІКНО 
+=============================*/
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(2px);
+
+  transition: visibility var(--duration) var(--timing-function),
+    opacity var(--duration) var(--timing-function);
+}
+
+.backdrop.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+
+  width: 528px;
+  min-height: 581px;
+
+  background-color: var(--white-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+
+  transition: transform var(--duration) var(--timing-function),
+    opacity var(--duration) var(--timing-function);
+}
+
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(1.2);
+  opacity: 0.5;
+}
+
+.button-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 30px;
+  height: 30px;
+
+  background-color: var(--white-color);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+
+  cursor: pointer;
+}
+
+/* PORTFOLIO.HTML MAIN */
+.portfolio-list {
+  display: flex;
+  justify-content: center;
+}
+
+.portfolio-list:not(:last-child) {
+  margin-bottom: 50px;
+}
+
+.portfolio-button {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 6px 22px;
+
+  border: none;
+  border-radius: 4px;
+  background-color: var(--team-bcg-color);
+
+  cursor: pointer;
+
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--main-color);
+
+  transition: background-color var(--duration) var(--timing-function),
+    box-shadow var(--duration) var(--timing-function),
+    color var(--duration) var(--timing-function);
+}
+
+.portfolio-button.first-button {
+  padding: 6px 25px;
+}
+
+.item-button:not(:first-child) {
+  margin-left: 8px;
+}
+
+.portfolio-button:hover,
+.portfolio-button:focus {
+  background-color: var(--focus-color);
+
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+
+  color: var(--white-color);
+}
+
+.portfolio-list.card-list {
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 30px;
+}
+
+.portfolio-item {
+  flex-basis: calc((100% - 30px * 2) / 3);
+}
+
+.card-description {
+  padding: 20px 24px;
+  border: 1px solid #eeeeee;
+  border-top: none;
+}
+
+.portfolio-title {
+  margin-bottom: 4px;
+
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  color: var(--main-color);
+}
+
+.portfolio-text {
+  font-size: 16px;
+  line-height: 1.88;
+  color: var(--secondary-color);
+}
+
+.portfolio-link {
+  display: block;
+  text-decoration: none;
+
+  transition: box-shadow var(--duration) var(--timing-function);
+}
+
+.portfolio-link:hover,
+.portfolio-link:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+/* ===================================== 
+   АНІМАЦІЯ OVERLAY ДЛЯ КАРТОК PORTFOLIO 
+   =====================================*/
+.portfolio-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.overlay-portfolio {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  transform: translateY(100%);
+
+  display: flex;
+  align-items: center;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: var(--overlay-portfolio);
+
+  transition: transform var(--duration) var(--timing-function);
+}
+
+.portfolio-link:hover .overlay-portfolio,
+.portfolio-link:focus .overlay-portfolio {
+  transform: translateY(0);
+}
+
+.overlay-description {
+  padding-left: 24px;
+  padding-right: 24px;
+
+  font-size: 18px;
+  line-height: 1.56;
+
+  color: var(--white-color);
+}
