@@ -563,6 +563,15 @@ ul {
   cursor: pointer;
 }
 
+.button-close:hover,
+.button-close:focus {
+  color: var(--focus-color);
+}
+
+.close-icons {
+  fill: currentColor;
+}
+
 .modal-title {
   margin-bottom: 12px;
 
@@ -580,6 +589,7 @@ ul {
 }
 
 .form-field {
+  position: relative;
   display: flex;
   flex-direction: column;
 }
@@ -606,6 +616,26 @@ ul {
   
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+}
+
+.form-icons {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  trasform: translateY (-50%);
+
+  transition: transform var(--duration) var(--timing-function);
+
+  fill: currentColor;
+}
+
+.form-field:focus-within>.form-input,
+.form-field:focus-within>.form-message {
+  border-color: var(--focus-color);
+}
+
+.form-field:focus-within>.form-icons {
+  color: var(--focus-color);
 }
 
 .form-message {
