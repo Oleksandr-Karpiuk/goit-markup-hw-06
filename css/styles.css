@@ -528,7 +528,8 @@ ul {
 
   width: 528px;
   min-height: 581px;
-  padding: 40px;
+  padding-top: 40px;
+  padding-bottom: 40px;
 
   background-color: var(--white-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -588,6 +589,8 @@ ul {
    ============================ */
 .form-group {
   margin-bottom: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
 }
 
 .form-field {
@@ -608,22 +611,21 @@ ul {
   line-height: 1.17;
   letter-spacing: 0.01em;
   color: var(--secondary-color);
-
 }
 
 .form-input,
 .form-message {
   height: 40px;
   padding-left: 42px;
-  
+
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
 
   transition: border-color var(--duration) var(--timing-function);
 }
 
-.form-field:focus-within>.form-input,
-.form-field:focus-within>.form-message {
+.form-field:focus-within > .form-input,
+.form-field:focus-within > .form-message {
   border-color: var(--focus-color);
 }
 
@@ -636,13 +638,13 @@ ul {
   position: absolute;
   top: 50%;
   left: 12px;
-  
+
   transition: color var(--duration) var(--timing-function);
 
   fill: currentColor;
 }
 
-.form-field:focus-within>.form-icons {
+.form-field:focus-within > .form-icons {
   color: var(--focus-color);
 }
 
@@ -653,9 +655,27 @@ ul {
   resize: none;
 }
 
+.form-message::placeholder {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+
+  color: rgba(117, 117, 117, 0.5);
+}
+
 .form-checkbox {
   display: block;
   margin-bottom: 30px;
+  padding-left: 52px;
+  padding-right: 51px;
+}
+
+.checkbox-text {
+  color: var(--secondary-color);
+}
+
+.checkbox-link {
+  color: var(--focus-color);
 }
 
 .form-button {
