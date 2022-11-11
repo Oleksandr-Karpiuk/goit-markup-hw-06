@@ -561,6 +561,8 @@ ul {
   border-radius: 50%;
 
   cursor: pointer;
+
+  transition: color var(--duration) var(--timing-function);
 }
 
 .button-close:hover,
@@ -616,6 +618,18 @@ ul {
   
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+
+  transition: border-color var(--duration) var(--timing-function);
+}
+
+.form-field:focus-within>.form-input,
+.form-field:focus-within>.form-message {
+  border-color: var(--focus-color);
+}
+
+.form-input:focus-visible,
+.form-message:focus-visible {
+  outline: none;
 }
 
 .form-icons {
@@ -624,14 +638,9 @@ ul {
   left: 12px;
   trasform: translateY (-50%);
 
-  transition: transform var(--duration) var(--timing-function);
+  transition: color var(--duration) var(--timing-function);
 
   fill: currentColor;
-}
-
-.form-field:focus-within>.form-input,
-.form-field:focus-within>.form-message {
-  border-color: var(--focus-color);
 }
 
 .form-field:focus-within>.form-icons {
