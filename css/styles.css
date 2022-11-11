@@ -631,7 +631,7 @@ ul {
 
 .form-input:focus-visible,
 .form-message:focus-visible {
-  outline: none;
+  outline: transparent;
 }
 
 .form-icons {
